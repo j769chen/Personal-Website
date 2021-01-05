@@ -1,0 +1,54 @@
+import React from "react"
+
+import Navbar from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
+import Container from "react-bootstrap/Container"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "../App.css"
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, fas)
+
+
+const Navigation = () => {
+    return (
+        <Navbar bg="light" expand="lg">
+            <Container>
+                
+                <Navbar.Brand>James Chen</Navbar.Brand>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav>
+                            <Nav.Link href="#home">About Me</Nav.Link>
+                            <Nav.Link href="#link">Projects</Nav.Link>
+                            <Nav.Link href="#link"><strong>Resume</strong></Nav.Link>
+                        </Nav>
+                        <Nav className="ml-auto">
+                            <a href="https://github.com/j769chen" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={["fab", "github"]} size="lg"/>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/james23chen/" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={["fab", "linkedin"]} size="lg"/>
+                            </a>
+
+                            <a href="mailto:james.chen5@carleton.ca" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={["fas", "envelope"]} size="lg"/>
+                            </a>
+
+                            <a href="https://www.instagram.com/jchen27_/" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={["fab", "instagram"]} size="lg"/>
+                            </a>
+                        </Nav>
+                    </Navbar.Collapse>
+            </Container>
+        </Navbar>
+        
+            
+    )
+}
+
+export default Navigation
