@@ -35,6 +35,7 @@ const Navigation = () => {
               href="https://github.com/j769chen"
               target="_blank"
               rel="noreferrer"
+              id="navbarLinks"
             >
               <FontAwesomeIcon icon={faGithub} size="lg" />
             </a>
@@ -43,6 +44,7 @@ const Navigation = () => {
               href="https://www.linkedin.com/in/james23chen/"
               target="_blank"
               rel="noreferrer"
+              id="navbarLinks"
             >
               <FontAwesomeIcon icon={faLinkedin} size="lg" />
             </a>
@@ -51,6 +53,7 @@ const Navigation = () => {
               href="mailto:james.chen5@carleton.ca"
               target="_blank"
               rel="noreferrer"
+              id="navbarLinks"
             >
               <FontAwesomeIcon icon={faEnvelope} size="lg" />
             </a>
@@ -59,6 +62,7 @@ const Navigation = () => {
               href="https://www.instagram.com/jchen27_/"
               target="_blank"
               rel="noreferrer"
+              id="navbarLinks"
             >
               <FontAwesomeIcon icon={faInstagram} size="lg" />
             </a>

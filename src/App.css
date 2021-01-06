@@ -7,22 +7,28 @@ html {
 }
 
 a {
-    color: black;
-    padding-right: 30%;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
-a:hover 
-{
-     color:#0060B6; 
-     text-decoration:none; 
-     cursor:pointer;  
+#navbarLinks {
+  padding-right: 30%;
 }
 
-h1{
-    margin-top: 5%;
+a:hover {
+  color: #0060b6;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-img{
+h1 {
+  margin-top: 5%;
+}
+
+img {
   max-height: 500px;
+}
+
+.container {
+  max-width: "100%";
 }

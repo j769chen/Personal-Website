@@ -1,10 +1,9 @@
 import * as React from "react";
 
 import styled, { keyframes } from "styled-components";
-import { fadeIn, fadeInDown, fadeInLeft } from "react-animations";
+import { fadeIn, fadeInUp, fadeInLeft } from "react-animations";
 
-const fadeDownAnim = keyframes`${fadeInDown}`;
-const fadeLeftAnim = keyframes`${fadeInLeft}`;
+const fadeUpAnim = keyframes`${fadeInUp}`;
 const fadeAnim = keyframes`${fadeIn}`;
 
 const TitleAnimation = styled.h1`
@@ -15,4 +14,8 @@ const SubTitleAnimation = styled.p`
   animation: 2.5s ${fadeAnim};
 `;
 
-export { TitleAnimation, SubTitleAnimation };
+const HeadshotAnimation = styled.p`
+  animation: 1.5s ${fadeUpAnim};
+`;
+
+export { TitleAnimation, SubTitleAnimation, HeadshotAnimation };
