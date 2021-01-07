@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
+import resume from "../Resume2021Winter.pdf";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,7 +23,9 @@ const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand>James Chen</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          James Chen
+        </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
             <Nav.Link as={Link} to="/aboutMe">
@@ -31,7 +34,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/projects">
               Projects
             </Nav.Link>
-            <Nav.Link as={Link} to="/resume">
+            <Nav.Link as={Link} to={resume}>
               <strong>Resume</strong>
             </Nav.Link>
           </Nav>
