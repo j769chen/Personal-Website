@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "gatsby";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -24,9 +25,13 @@ const Navigation = () => {
         <Navbar.Brand>James Chen</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
-            <Nav.Link href="#home">About Me</Nav.Link>
-            <Nav.Link href="#link">Projects</Nav.Link>
-            <Nav.Link href="#test">
+            <Nav.Link as={Link} to="/aboutMe">
+              About Me
+            </Nav.Link>
+            <Nav.Link as={Link} to="/projects">
+              Projects
+            </Nav.Link>
+            <Nav.Link as={Link} to="/resume">
               <strong>Resume</strong>
             </Nav.Link>
           </Nav>
