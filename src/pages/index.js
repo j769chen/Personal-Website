@@ -2,7 +2,6 @@ import * as React from "react";
 
 import Navigation from "../Components/Navbar.js";
 import Summary from "../Components/Summary.js";
-import Highlights from "../Components/Highlights.js";
 import Footer from "../Components/Footer.js";
 
 import "../App.css";
@@ -19,9 +18,9 @@ const IndexPage = () => {
       <Container fluid>
         <Navigation />
       </Container>
-
+      <br />
       <Container>
-        <Row style={{ width: "1162px" }}>
+        <Row>
           <Col xs={7}>
             <Summary />
           </Col>
@@ -39,9 +38,7 @@ const IndexPage = () => {
       </Container>
       <br />
       <Container>
-        <Row style={{ width: "1162px" }}>
-          <Highlights />
-        </Row>
+        <Row style={{ width: "1162px" }}></Row>
       </Container>
       <br />
       <Footer />

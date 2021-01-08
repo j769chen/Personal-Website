@@ -10,36 +10,51 @@ const Summary = () => {
     <Container>
       <SummaryAnimation>
         <h1>Hey There,</h1>
-        <p>I'm James, nice to meet you!</p>
-        <p>Here's a little bit about me:</p>
+        <p>I'm James, nice to meet you! Here's a little bit about me:</p>
+        <div style={{ marginLeft: "1%" }}>
+          <p>
+            <Badge
+              variant="danger"
+              style={{
+                backgroundColor: "orange",
+                filter: "saturate(75%)"
+              }}
+            >
+              Location
+            </Badge>
+            {" Ottawa, Ontario "}
+          </p>
 
-        <h5>
-          <Badge variant="danger">Location</Badge>
-          {" Ottawa, Ontario "}
-        </h5>
-        <br />
-        <h5>
-          <Badge variant="primary">Education</Badge>
-          {" Bachelor of Computer Science, Carleton University "}
-        </h5>
-        <br />
-        <h5>
-          <Badge variant="success">Skills</Badge>
-          {" React, Python, Java, JavaScript, C, C++, HTML/CSS "}
-        </h5>
-        <br />
-        <h5>
-          <Badge variant="info">Interests</Badge>
-          {" Badminton, Fitness/Powerlifting, Cooking, Violin "}
-        </h5>
-        <br />
+          <p>
+            <Badge variant="primary" style={{ filter: "grayscale(40%)" }}>
+              Education
+            </Badge>
+            {" Bachelor of Computer Science, Carleton University "}
+          </p>
+
+          <p>
+            <Badge variant="danger" style={{ filter: "grayscale(40%)" }}>
+              Skills
+            </Badge>
+            {" React, Python, Java, JavaScript, C, C++, HTML/CSS "}
+          </p>
+
+          <p>
+            <Badge variant="info" style={{ filter: "grayscale(40%)" }}>
+              Interests
+            </Badge>
+            {" Badminton, Fitness/Powerlifting, Cooking, Violin "}
+          </p>
+        </div>
         <p>
           I'm super passionate about using software to build cool stuff. Check
           out my <a href="https://github.com/j769chen">Github</a> to see some of
-          the projects that I've worked on.
+          the projects that I've worked on!
         </p>
         <p>
-          If you want to chat, feel free to reach out to me on{" "}
+          If you want to chat, feel free to email me at{" "}
+          <a href="mailto:james.chen5@carleton.ca">james.chen5@carleton.ca</a>,
+          or reach out on{" "}
           <a href="https://www.linkedin.com/in/james23chen/">LinkedIn</a>!
         </p>
       </SummaryAnimation>
