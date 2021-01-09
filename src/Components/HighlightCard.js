@@ -32,7 +32,7 @@ const HighlightCard = (props) => {
       style={{
         color: props.color,
         borderColor: "black",
-        padding: "20px",
+        padding: "40px",
       }}
     >
       <Row>
@@ -42,7 +42,7 @@ const HighlightCard = (props) => {
           <p style={{fontSize: "14px"}}>{props.bodyText}</p>
         </Col>
         <Col>
-          <Image src={props.image} alt="Background" />
+          <Image src={props.image} alt="Background" style={{marginTop: "20px", marginLeft: "20px"}}/>
         </Col>
       </Row>
     </Container>

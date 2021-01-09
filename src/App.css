@@ -37,5 +37,14 @@ img {
 }
 
 .highlight {
-  box-shadow: 0 0 3px 1px #ccc;
+  height: 400px;
+  transform: scale(.98);
+  transition-duration: 0.5s;
+  box-shadow: 0 0 5px 1px #ccc;
+}
+
+.highlight:hover {
+  transform: scale(1);
+  transition-duration: 0.5s;
+  box-shadow: 0 0 10px 1px grey;
 }

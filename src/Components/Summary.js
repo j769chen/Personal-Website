@@ -10,37 +10,32 @@ const Summary = () => {
     <Container>
       <SummaryAnimation>
         <h1>Hey There,</h1>
-        <p>I'm James, nice to meet you! Here's a little bit about me:</p>
+        <div>I'm James, nice to meet you!</div>
+        <p>Here's a little bit about me:</p>
         <div style={{ marginLeft: "1%" }}>
           <p>
-            <Badge
-              variant="danger"
-              style={{
-                backgroundColor: "orange",
-                filter: "saturate(75%)"
-              }}
-            >
-              Location
+            <Badge variant="danger" style={{ filter: "grayscale(20%)", backgroundColor: "#0099CC" }}>
+              Most Recent Position
             </Badge>
-            {" Ottawa, Ontario "}
+            {" Data Engineer @ Raven Telemetry "}
           </p>
 
           <p>
-            <Badge variant="primary" style={{ filter: "grayscale(40%)" }}>
+            <Badge variant="primary" style={{ filter: "grayscale(20%)", backgroundColor: "#e0305a" }}>
               Education
             </Badge>
             {" Bachelor of Computer Science, Carleton University "}
           </p>
 
           <p>
-            <Badge variant="danger" style={{ filter: "grayscale(40%)" }}>
+            <Badge variant="danger" style={{ filter: "grayscale(20%)", backgroundColor: "#66CCFF" }}>
               Skills
             </Badge>
             {" React, Python, Java, JavaScript, C, C++, HTML/CSS "}
           </p>
 
           <p>
-            <Badge variant="info" style={{ filter: "grayscale(40%)" }}>
+            <Badge variant="info" style={{ filter: "grayscale(20%)", backgroundColor: "#996699" }}>
               Interests
             </Badge>
             {" Badminton, Fitness/Powerlifting, Cooking, Violin "}

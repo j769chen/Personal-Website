@@ -4,9 +4,9 @@ import Navigation from "../Components/Navbar.js";
 import Footer from "../Components/Footer.js";
 import HighlightCard from "../Components/HighlightCard.js";
 import LeagueData from "../images/LeagueData.jpg";
+import FlappyBird from "../images/FlappyBird.jpg";
+import Website from "../images/Website.jpg";
 
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { SummaryAnimation } from "../Animations.js";
 
@@ -18,6 +18,8 @@ import {
   faHtml5,
   faReact,
   faGit,
+  faJs,
+  faCss3,
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(faJava, faPython, faGithub, faHtml5, faReact);
@@ -41,10 +43,29 @@ const projects = () => {
             image={LeagueData}
             icons={[faPython, faGit]}
           />
+          <br />
+          <HighlightCard
+            title={"Flappy Bird"}
+            bodyText={
+              "Flappy Bird game made in Java with JavaFX GUI library. This project was made with object-oriented programming principles in mind, e.g. encapsulation and polymorphism, and to apply them in a practical scenario."
+            }
+            image={FlappyBird}
+            icons={[faJava, faGit]}
+          />
+          <br />
+          <HighlightCard
+            title={"Personal Website"}
+            bodyText={
+              "Personal portfolio website with info about me, some of my projects, and more! Developed in part to get more comfortable with React.js and front-end development as a whole."
+            }
+            image={Website}
+            icons={[faReact, faJs, faHtml5, faCss3]}
+          />
         </SummaryAnimation>
       </Container>
       <br />
       <Footer />
+      <br />
     </main>
   );
 };

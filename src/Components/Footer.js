@@ -14,7 +14,7 @@ library.add(faLinkedin, faGithub, faInstagram, faEnvelope);
 
 const Footer = () => {
   return (
-    <Container style={{ textAlign: "center" }}>
+    <Container style={{ textAlign: "center"}}>
       <a
         href="https://github.com/j769chen"
         target="_blank"
