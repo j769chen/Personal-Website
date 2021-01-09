@@ -11,6 +11,7 @@ import {
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faLinkedin, faGithub, faInstagram, faEnvelope);
+
 const Footer = () => {
   return (
     <Container style={{ textAlign: "center" }}>
