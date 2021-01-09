@@ -4,9 +4,9 @@ import { Link } from "gatsby";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import resume from "../Resume2021Winter.pdf";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-import resume from "../Resume2021Winter.pdf";
 
 const Navigation = () => {
   return (
@@ -26,7 +26,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/projects">
               Projects
             </Nav.Link>
-            <Nav.Link as={Link} to={resume}>
+            <Nav.Link href={resume} target="_blank">
               <strong>Resume</strong>
             </Nav.Link>
           </Nav>

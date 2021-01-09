@@ -42,6 +42,7 @@ const projects = () => {
             }
             image={LeagueData}
             icons={[faPython, faGit]}
+            repo={"League-Data-Analysis"}
           />
           <br />
           <HighlightCard
@@ -51,6 +52,7 @@ const projects = () => {
             }
             image={FlappyBird}
             icons={[faJava, faGit]}
+            repo={"FlappyBird"}
           />
           <br />
           <HighlightCard
@@ -60,6 +62,7 @@ const projects = () => {
             }
             image={Website}
             icons={[faReact, faJs, faHtml5, faCss3]}
+            repo={"Personal-Website-2021"}
           />
         </SummaryAnimation>
       </Container>
