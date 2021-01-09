@@ -10,6 +10,18 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { SummaryAnimation } from "../Animations.js";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faJava,
+  faPython,
+  faGithub,
+  faHtml5,
+  faReact,
+  faGit,
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(faJava, faPython, faGithub, faHtml5, faReact);
+
 const projects = () => {
   return (
     <main>
@@ -23,8 +35,11 @@ const projects = () => {
           <br />
           <HighlightCard
             title={"LoL Data Analysis"}
-            bodyText={"Test"}
+            bodyText={
+              "An app written in Python that uses the Riot API to query a user's recent League of Legends match history, comparing their stats to players of a similar ELO, and providing insight as to how the user can improve their gameplay."
+            }
             image={LeagueData}
+            icons={[faPython, faGit]}
           />
         </SummaryAnimation>
       </Container>

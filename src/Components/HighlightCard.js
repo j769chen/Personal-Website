@@ -16,6 +16,15 @@ import {
 
 library.add(faJava, faPython, faGithub, faHtml5, faReact);
 
+function getIcons(icons) {
+  var faIcons = [];
+
+  for (var i = 0; i < icons.length; i++) {
+    faIcons.push(<FontAwesomeIcon icon={icons[i]} size="lg" style={{marginLeft: "6px"}} />);
+  }
+  return faIcons;
+}
+
 const HighlightCard = (props) => {
   return (
     <Container
@@ -29,8 +38,8 @@ const HighlightCard = (props) => {
       <Row>
         <Col xs={8}>
           <h3>{props.title}</h3>
-          <div></div>
-          <p>{props.bodyText}</p>
+          <div>{getIcons(props.icons)}</div>
+          <p style={{fontSize: "14px"}}>{props.bodyText}</p>
         </Col>
         <Col>
           <Image src={props.image} alt="Background" />
