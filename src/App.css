@@ -37,7 +37,7 @@ img {
 }
 
 .highlight {
-  height: 400px;
+  min-height: 400px;
   transform: scale(.98);
   transition-duration: 0.5s;
   box-shadow: 0 0 5px 1px #ccc;
@@ -45,6 +45,17 @@ img {
 
 .highlight:hover {
   transform: scale(1);
+  transition-duration: 0.5s;
+  box-shadow: 0 0 10px 1px grey;
+}
+
+.collageImg {
+  max-height: 100px;
+  transition-duration: 0.5s;
+  box-shadow: 0 0 5px 1px #ccc;
+}
+
+.collageImg:hover {
   transition-duration: 0.5s;
   box-shadow: 0 0 10px 1px grey;
 }

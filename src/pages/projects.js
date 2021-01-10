@@ -34,6 +34,17 @@ const projects = () => {
       <Container>
         <SummaryAnimation>
           <h2>Projects</h2>
+          <div>
+            Here's some stuff that I've done, check out my{" "}
+            <a
+              href={"https://github.com/j769chen"}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>{" "}
+            for more!
+          </div>
           <br />
           <HighlightCard
             title={"LoL Data Analysis"}

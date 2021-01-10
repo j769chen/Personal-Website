@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import Footer from "../Components/Footer.js";
+import PhotoCollage from "../Components/PhotoCollage.js";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -17,6 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SummaryAnimation, ListAnimation } from "../Animations.js";
 
 library.add(faCode, faCodeBranch);
+
 const aboutMePage = () => {
   return (
     <main>
@@ -56,7 +58,7 @@ const aboutMePage = () => {
                 fitness/powerlifting, and playing violin.
               </p>
             </Col>
-            <Col></Col>
+            <Col><PhotoCollage /></Col>
           </Row>
 
           <h2>My Skills</h2>

@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button"
+import Button from "react-bootstrap/Button";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,7 +21,13 @@ function getIcons(icons) {
   var faIcons = [];
 
   for (var i = 0; i < icons.length; i++) {
-    faIcons.push(<FontAwesomeIcon icon={icons[i]} size="lg" style={{marginLeft: "6px"}} />);
+    faIcons.push(
+      <FontAwesomeIcon
+        icon={icons[i]}
+        size="lg"
+        style={{ marginLeft: "6px" }}
+      />
+    );
   }
   return faIcons;
 }
@@ -46,11 +52,22 @@ const HighlightCard = (props) => {
         <Col xs={8}>
           <h3>{props.title}</h3>
           <div>{getIcons(props.icons)}</div>
-          <p style={{fontSize: "14px"}}>{props.bodyText}</p>
-          <Button variant="" href={getGithubLink(props.repo)} target="_blank" style={{backgroundColor: "#cccccc"}}>View on&nbsp; <FontAwesomeIcon icon={faGithub} /></Button>
+          <p style={{ fontSize: "14px" }}>{props.bodyText}</p>
+          <Button
+            variant=""
+            href={getGithubLink(props.repo)}
+            target="_blank"
+            style={{ backgroundColor: "#cccccc" }}
+          >
+            View on&nbsp; <FontAwesomeIcon icon={faGithub} />
+          </Button>
         </Col>
         <Col>
-          <Image src={props.image} alt="Background" style={{marginTop: "20px", marginLeft: "20px"}}/>
+          <Image
+            src={props.image}
+            alt="Background"
+            style={{ marginTop: "20px", marginLeft: "20px" }}
+          />
         </Col>
       </Row>
     </Container>
