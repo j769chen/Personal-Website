@@ -1,8 +1,7 @@
 module.exports = {
-  pathPrefix: "/Personal-Website",
   siteMetadata: {
     title: "jchen27",
-    siteUrl: "https://needstobetheproductionurl.com"
+    siteUrl: "https://needstobetheproductionurl.com",
   },
   plugins: [
     "gatsby-plugin-sass",
