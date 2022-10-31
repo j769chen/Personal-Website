@@ -5,23 +5,23 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
 import Jason from "../images/Jason.jpg";
-import Prom1 from "../images/Prom1.jpg";
+import Toby from "../images/Toby.jpg";
 import ReadyStance from "../images/ReadyStance.jpg";
 import Prom2 from "../images/Prom2.jpg";
-import Smash from "../images/Smash.jpg";
 import EngHack from "../images/EngHack.jpg";
 import HackTheNorth from "../images/HackTheNorth.jpg";
 import Medals from "../images/Medals.jpg";
+import Van1 from "../images/van1.jpg";
 
 const PhotoCollage = () => {
   return (
-    <Container style={{marginTop: "100px"}}>
+    <Container style={{ marginTop: "100px" }}>
       <Row>
         <Col>
           <Image className="collageImg" src={Jason} />
         </Col>
         <Col>
-          <Image className="collageImg" src={Prom1} />
+          <Image className="collageImg" src={Toby} />
         </Col>
         <Col>
           <Image className="collageImg" src={ReadyStance} />
@@ -33,7 +33,7 @@ const PhotoCollage = () => {
           <Image className="collageImg" src={Prom2} />
         </Col>
         <Col>
-          <Image className="collageImg" src={Smash} />
+          <Image className="collageImg" src={Van1} />
         </Col>
         <Col>
           <Image className="collageImg" src={EngHack} />
@@ -41,7 +41,7 @@ const PhotoCollage = () => {
       </Row>
       <br />
       <Row>
-      <Col>
+        <Col>
           <Image className="collageImg" src={Medals} />
         </Col>
         <Col>

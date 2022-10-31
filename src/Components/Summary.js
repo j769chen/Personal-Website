@@ -15,28 +15,28 @@ const Summary = () => {
         <div style={{ marginLeft: "1%" }}>
           <p>
             <Badge variant="danger" style={{ filter: "grayscale(20%)", backgroundColor: "#0099CC" }}>
-              Most Recent Position
+              I'm currently a:
             </Badge>
-            {" Data Engineer @ Raven Telemetry "}
+            {" Server Engineer @ Electronic Arts "}
           </p>
 
           <p>
             <Badge variant="primary" style={{ filter: "grayscale(20%)", backgroundColor: "#e0305a" }}>
-              Education
+              I'm studying:
             </Badge>
             {" Bachelor of Computer Science, Carleton University "}
           </p>
 
           <p>
             <Badge variant="danger" style={{ filter: "grayscale(20%)", backgroundColor: "#66CCFF" }}>
-              Skills
+              Some of my skills are:
             </Badge>
-            {" React, Python, Java, JavaScript, C, C++, HTML/CSS "}
+            {" ReactJS, AngularJS, TypeScript, Python, Kubernetes, SQL "}
           </p>
 
           <p>
             <Badge variant="info" style={{ filter: "grayscale(20%)", backgroundColor: "#996699" }}>
-              Interests
+              I'm really into:
             </Badge>
             {" Badminton, Fitness/Powerlifting, Cooking, Violin "}
           </p>
@@ -45,6 +45,9 @@ const Summary = () => {
           I'm super passionate about using software to build cool stuff. Check
           out my <a href="https://github.com/j769chen">Github</a> to see some of
           the projects that I've worked on!
+        </p>
+        <p>
+          Currently seeking Summer 2022 Internships!
         </p>
         <p>
           If you want to chat, feel free to email me at{" "}

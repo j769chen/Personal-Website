@@ -50,7 +50,7 @@ img {
 }
 
 .collageImg {
-  max-height: 100px;
+  max-height: 110px;
   transition-duration: 0.5s;
   box-shadow: 0 0 5px 1px #ccc;
 }

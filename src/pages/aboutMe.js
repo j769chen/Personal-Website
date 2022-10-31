@@ -73,29 +73,32 @@ const aboutMePage = () => {
 
               <div>Python</div>
               <div>Java</div>
-              <div>JavaScript</div>
+              <div>TypeScript</div>
               <div>C/C++</div>
+              <div>SQL</div>
             </Col>
             <Col>
               <h4>
                 Frameworks <FontAwesomeIcon icon={faFileCode} />
               </h4>
 
-              <div>React.js</div>
-              <div>Bootstrap</div>
-              <div>jQuery</div>
-              <div>Flask</div>
+              <div>ReactJS</div>
+              <div>AngularJS</div>
+              <div>ExpressJS</div>
+              <div>Spring Boot</div>
               <div>Pandas</div>
-              <div>BeautifulSoup4</div>
             </Col>
             <Col>
               <h4>
                 Tools <FontAwesomeIcon icon={faCodeBranch} />
               </h4>
               <div>Git</div>
+              <div>Node.js</div>
+              <div>MongoDB</div>
+              <div>Bash/zsh</div>
+              <div>Kubernetes</div>
+              <div>AWS</div>
               <div>Firebase</div>
-              <div>Linux</div>
-              <div>HTML/CSS</div>
             </Col>
           </Row>
         </ListAnimation>
