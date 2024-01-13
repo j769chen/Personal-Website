@@ -17,7 +17,7 @@ const Summary = () => {
             <Badge variant="danger" style={{ filter: "grayscale(20%)", backgroundColor: "#0099CC" }}>
               I'm currently a:
             </Badge>
-            {" Server Engineer @ Electronic Arts "}
+            {" Software Engineer Intern @ StackAdapt "}
           </p>
 
           <p>
@@ -31,7 +31,7 @@ const Summary = () => {
             <Badge variant="danger" style={{ filter: "grayscale(20%)", backgroundColor: "#66CCFF" }}>
               Some of my skills are:
             </Badge>
-            {" ReactJS, AngularJS, TypeScript, Python, Kubernetes, SQL "}
+            {" React, Angular, TypeScript, Python, Kubernetes, SQL "}
           </p>
 
           <p>
@@ -47,7 +47,7 @@ const Summary = () => {
           the projects that I've worked on!
         </p>
         <p>
-          Currently seeking Summer 2022 Internships!
+          Currently seeking 2024 fulltime opportunities!
         </p>
         <p>
           If you want to chat, feel free to email me at{" "}
