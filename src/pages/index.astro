@@ -1,0 +1,559 @@
+---
+import { Image } from "astro:assets";
+import Base from "../layouts/Base.astro";
+import Icon from "../components/Icon.astro";
+import { profile, current, internships, projects, archive, skills } from "../data";
+
+import headshot from "../assets/Headshot.jpg";
+import smash from "../assets/Smash.jpg";
+import toby from "../assets/Toby.jpg";
+import medals from "../assets/Medals.jpg";
+import htn from "../assets/HackTheNorth.jpg";
+
+const photos = [
+  { src: smash, alt: "James mid-jump smash on a badminton court" },
+  { src: toby, alt: "James at a badminton training hall" },
+  { src: medals, alt: "Three players wearing medals at a badminton tournament" },
+  { src: htn, alt: "James and teammates at Hack the North" },
+];
+
+const internshipCompanies = [...new Set(internships.map((r) => r.company))];
+const year = new Date().getFullYear();
+---
+
+<Base
+  title="James Chen · Software Engineer"
+  description="James Chen is a software engineer at StackAdapt in Ottawa, building creative tools for advertisers. Carleton CS grad."
+>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand">James Chen</a>
+      <nav aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-text">
+        <p class="eyebrow">{profile.role} · {profile.location}</p>
+        <h1>Hi, I'm James.<br />I build tools that make ads look good.</h1>
+        <p class="lede">
+          I'm a full-stack engineer at <strong>StackAdapt</strong>, working on Creative Builder and the Ivy AI features that help advertisers design, generate and ship creatives. Before that I did eight internships, including EA, BlackBerry and Kinaxis, and graduated in Computer Science from Carleton University.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href={`mailto:${profile.email}`}><Icon name="mail" /> Get in touch</a>
+          <a class="btn" href={profile.linkedin} target="_blank" rel="noreferrer"><Icon name="linkedin" /> LinkedIn</a>
+          <a class="btn" href={profile.github} target="_blank" rel="noreferrer"><Icon name="github" /> GitHub</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <Image src={headshot} alt="James Chen on the Vancouver waterfront" widths={[320, 480, 720]} sizes="(max-width: 800px) 70vw, 380px" loading="eager" fetchpriority="high" />
+      </div>
+    </section>
+
+    <section id="work" class="wrap">
+      <p class="eyebrow">Experience</p>
+      <h2 class="section-title">Where I've worked</h2>
+
+      <article class="current">
+        <div class="current-head">
+          <div>
+            <span class="badge">Now</span>
+            <h3>{current.title}, {current.company}</h3>
+          </div>
+          <span class="meta">{current.start} – {current.end} · {current.location}</span>
+        </div>
+        <p>{current.summary}</p>
+      </article>
+
+      <p class="timeline-intro">Internships at {internshipCompanies.length} companies, 2019–2024:</p>
+      <ol class="timeline">
+        {internships.map((r) => (
+          <li>
+            <span class="when">{r.start} – {r.end}</span>
+            <div>
+              <h3>{r.company}</h3>
+              <p class="meta">{r.title} · {r.location}</p>
+              {r.points && (
+                <ul class="points">
+                  {r.points.map((p) => <li>{p}</li>)}
+                </ul>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section id="projects" class="wrap">
+      <p class="eyebrow">Side projects</p>
+      <h2 class="section-title">Things I've built</h2>
+      <div class="cards">
+        {projects.map((p) => (
+          <a class="card" href={p.href} target="_blank" rel="noreferrer">
+            <div class="card-top">
+              <span class="meta">{p.year}</span>
+              <Icon name="arrow" />
+            </div>
+            <h3>{p.name}</h3>
+            <p>{p.blurb}</p>
+            <ul class="tags">
+              {p.stack.map((s) => <li>{s}</li>)}
+            </ul>
+          </a>
+        ))}
+      </div>
+
+      <h3 class="archive-title">From the archive</h3>
+      <ul class="archive">
+        {archive.map((p) => (
+          <li>
+            <a href={p.href} target="_blank" rel="noreferrer">{p.name}</a>
+            <span class="archive-blurb">{p.blurb}</span>
+            <span class="meta">{p.stack.join(", ")} · {p.year}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section id="about" class="wrap">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">Off the keyboard</h2>
+      <div class="about">
+        <div class="about-text">
+          <p>
+            I started in mechanical engineering at the University of Waterloo, where hackathons like Hack the North 2019 and a co-op at Raven.ai pulled me into software. In 2020 I transferred to Carleton for Computer Science and never looked back.
+          </p>
+          <p>
+            Most of my free time goes to badminton, which is also why I built an app to drill footwork. I also lift, cook and play violin.
+          </p>
+          <div class="skills">
+            {Object.entries(skills).map(([group, items]) => (
+              <div>
+                <h3>{group}</h3>
+                <ul class="tags">
+                  {items.map((s) => <li>{s}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="gallery">
+          {photos.map((p) => (
+            <Image src={p.src} alt={p.alt} widths={[240, 400]} sizes="(max-width: 640px) 45vw, 200px" />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap contact">
+      <p class="eyebrow">Contact</p>
+      <h2 class="section-title">Let's talk</h2>
+      <p>The fastest way to reach me is email. I'm also happy to connect on LinkedIn.</p>
+      <a class="email" href={`mailto:${profile.email}`}>{profile.email}</a>
+      <div class="actions">
+        <a class="btn" href={profile.linkedin} target="_blank" rel="noreferrer"><Icon name="linkedin" /> LinkedIn</a>
+        <a class="btn" href={profile.github} target="_blank" rel="noreferrer"><Icon name="github" /> GitHub</a>
+        <a class="btn" href={profile.instagram} target="_blank" rel="noreferrer"><Icon name="instagram" /> Instagram</a>
+        <a class="btn" href="/Resume.pdf" target="_blank" rel="noreferrer"><Icon name="file" /> Resume</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© {year} James Chen</span>
+    <span>Built with Astro</span>
+  </footer>
+</Base>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .brand {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  nav a:hover {
+    color: var(--text);
+  }
+
+  nav .nav-cta {
+    color: var(--accent);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 56px;
+    align-items: center;
+    padding-top: 72px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 5.4vw, 60px);
+    margin-bottom: 24px;
+  }
+
+  .lede {
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 58ch;
+    margin: 0 0 32px;
+  }
+
+  .lede strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 28px;
+    margin-left: auto;
+    box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.35);
+  }
+
+  .current {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+
+  .current-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .current h3 {
+    font-size: 26px;
+    margin-top: 8px;
+  }
+
+  .current p {
+    margin: 0;
+    max-width: 70ch;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .timeline-intro {
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .timeline > li {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .when {
+    color: var(--muted);
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    padding-top: 3px;
+  }
+
+  .timeline h3 {
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .timeline .meta {
+    margin: 2px 0 0;
+  }
+
+  .points {
+    margin: 10px 0 0;
+    padding-left: 18px;
+    font-size: 15px;
+  }
+
+  .points li + li {
+    margin-top: 4px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+  }
+
+  .card:hover .card-top svg {
+    color: var(--accent);
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--muted);
+    flex: 1;
+  }
+
+  .archive-title {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 40px 0 8px;
+  }
+
+  .archive {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .archive li {
+    display: grid;
+    grid-template-columns: 220px 1fr auto;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+    align-items: baseline;
+  }
+
+  .archive a {
+    font-weight: 600;
+  }
+
+  .archive-blurb {
+    color: var(--muted);
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .about-text p {
+    margin: 0 0 16px;
+    max-width: 60ch;
+  }
+
+  .skills {
+    display: grid;
+    gap: 18px;
+    margin-top: 32px;
+  }
+
+  .skills h3 {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    gap: 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .gallery img:nth-child(-n + 2) {
+    grid-row: span 2;
+  }
+
+  .contact p {
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+
+  .email {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 500;
+    margin-bottom: 28px;
+    word-break: break-all;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 14px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 88px;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 900px) {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding-top: 40px;
+    }
+
+    .hero-photo {
+      order: -1;
+    }
+
+    .hero-photo img {
+      max-width: 220px;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    nav {
+      gap: 16px;
+    }
+
+    nav a:not(.nav-cta) {
+      display: none;
+    }
+
+    .timeline > li {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+    }
+
+    .archive li {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+
+    .current {
+      padding: 22px;
+    }
+
+    .gallery {
+      grid-auto-rows: 120px;
+    }
+  }
+</style>

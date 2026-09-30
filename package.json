@@ -1,49 +1,23 @@
 {
-  "name": "jchen27",
-  "version": "1.0.0",
+  "name": "james-chen-me",
+  "version": "2.0.0",
   "private": true,
-  "description": "jchen27",
+  "type": "module",
   "author": "j769chen",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
-  },
   "license": "0BSD",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && gh-pages -d dist --dotfiles"
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "axios": "^0.21.1",
-    "bootstrap": "^4.5.3",
-    "gatsby": "^2.26.1",
-    "gatsby-image": "^2.8.0",
-    "gatsby-plugin-offline": "^3.7.1",
-    "gatsby-plugin-react-helmet": "^3.7.0",
-    "gatsby-plugin-sass": "^2.8.0",
-    "gatsby-plugin-sharp": "^2.11.2",
-    "gatsby-plugin-sitemap": "^2.9.0",
-    "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-transformer-sharp": "^2.9.0",
-    "jquery": "^3.5.1",
-    "node-sass": "^5.0.0",
-    "popper.js": "^1.16.1",
-    "react": "^16.13.1",
-    "react-animations": "^1.0.0",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1"
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.5",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^6.3.0"
   }
 }

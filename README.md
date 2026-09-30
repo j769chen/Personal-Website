@@ -1,30 +1,11 @@
-## 🚀 Quick start
+# james-chen.me
 
-1.  **Create a Gatsby site.**
+Personal site, built with [Astro](https://astro.build) and deployed to GitHub Pages.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+```shell
+npm install
+npm run dev      # http://localhost:4321
+npm run deploy   # builds and pushes dist/ to the gh-pages branch
+```
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Deploy Changes**
-    ```shell
-    npm run deploy
-    ```
+Content (experience, projects, skills) lives in `src/data.ts`.

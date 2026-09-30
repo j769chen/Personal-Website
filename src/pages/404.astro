@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Page not found · James Chen" description="This page doesn't exist.">
+  <main class="wrap notfound">
+    <p class="eyebrow">404</p>
+    <h1>That page is out of bounds.</h1>
+    <p>The link may be old. The whole site lives on one page now.</p>
+    <a class="btn primary" href="/">Back to home</a>
+  </main>
+</Base>
+
+<style>
+  .notfound {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: clamp(34px, 5vw, 52px);
+    margin-bottom: 16px;
+  }
+
+  p:not(.eyebrow) {
+    color: var(--muted);
+    margin: 0 0 28px;
+  }
+</style>
