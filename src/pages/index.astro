@@ -19,6 +19,7 @@ const photos = [
 
 const internshipCompanies = [...new Set(internships.map((r) => r.company))];
 const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base
@@ -160,7 +161,7 @@ const year = new Date().getFullYear();
         <a class="btn" href={profile.linkedin} target="_blank" rel="noreferrer"><Icon name="linkedin" /> LinkedIn</a>
         <a class="btn" href={profile.github} target="_blank" rel="noreferrer"><Icon name="github" /> GitHub</a>
         <a class="btn" href={profile.instagram} target="_blank" rel="noreferrer"><Icon name="instagram" /> Instagram</a>
-        <a class="btn" href="/Resume.pdf" target="_blank" rel="noreferrer"><Icon name="file" /> Resume</a>
+        <a class="btn" href={`${base}Resume.pdf`} target="_blank" rel="noreferrer"><Icon name="file" /> Resume</a>
       </div>
     </section>
   </main>
