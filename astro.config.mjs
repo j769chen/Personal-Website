@@ -2,10 +2,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://james-chen.me",
+  site: "https://j769chen.github.io",
+  base: "/Personal-Website/",
   integrations: [sitemap()],
-  redirects: {
-    "/aboutMe": "/#about",
-    "/projects": "/#projects",
-  },
 });
