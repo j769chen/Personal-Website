@@ -198,5 +198,5 @@ export const skills = {
   Languages: ["TypeScript", "Python", "Ruby", "Java", "SQL", "C/C++"],
   Frontend: ["React", "React Native", "Angular"],
   "Backend & data": ["Rails", "GraphQL", "Pandas"],
-  Infrastructure: ["Kubernetes", "AWS", "Grafana", "Git", "CI/CD"],
+  Infrastructure: ["Kubernetes", "AWS", "Grafana", "Git"],
 };
