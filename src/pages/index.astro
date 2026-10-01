@@ -127,27 +127,32 @@ const base = import.meta.env.BASE_URL;
       </ul>
     </section>
 
+    <section id="skills" class="wrap">
+      <p class="eyebrow">Skills</p>
+      <h2 class="section-title">What I work with</h2>
+      <div class="skills">
+        {Object.entries(skills).map(([group, items]) => (
+          <div>
+            <h3>{group}</h3>
+            <ul class="tags">
+              {items.map((s) => <li>{s}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
     <section id="about" class="wrap">
       <p class="eyebrow">About</p>
-      <h2 class="section-title">Off the keyboard</h2>
+      <h2 class="section-title">Outside of work</h2>
       <div class="about">
         <div class="about-text">
           <p>
-            I started in mechanical engineering at the University of Waterloo, where hackathons like Hack the North 2019 and a co-op at Raven.ai pulled me into software. In 2020 I transferred to Carleton for Computer Science and never looked back.
+            Most of my free time goes to badminton, which is also why I built an app to drill footwork. When I'm not on court, I like to lift, travel and enjoy good food.
           </p>
           <p>
-            Most of my free time goes to badminton, which is also why I built an app to drill footwork. I also lift, cook and play violin.
+            I used to have esports dreams. These days my League career peaks at building a drawing game for people who are better at it than me.
           </p>
-          <div class="skills">
-            {Object.entries(skills).map(([group, items]) => (
-              <div>
-                <h3>{group}</h3>
-                <ul class="tags">
-                  {items.map((s) => <li>{s}</li>)}
-                </ul>
-              </div>
-            ))}
-          </div>
         </div>
         <div class="gallery">
           {photos.map((p) => (
@@ -451,8 +456,8 @@ const base = import.meta.env.BASE_URL;
 
   .skills {
     display: grid;
-    gap: 18px;
-    margin-top: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
   }
 
   .skills h3 {
@@ -515,6 +520,10 @@ const base = import.meta.env.BASE_URL;
 
     .about {
       grid-template-columns: 1fr;
+    }
+
+    .skills {
+      grid-template-columns: 1fr 1fr;
     }
   }
 
