@@ -2,7 +2,7 @@ export const profile = {
   name: "James Chen",
   role: "Software Engineer",
   company: "StackAdapt",
-  location: "Ottawa, Canada",
+  location: "Toronto, Canada",
   email: "qgjameschen@gmail.com",
   github: "https://github.com/j769chen",
   linkedin: "https://www.linkedin.com/in/james23chen/",
