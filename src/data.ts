@@ -17,7 +17,7 @@ export type Role = {
   location: string;
   summary?: string;
   points?: string[];
-  highlights?: { name: string; points: string[] }[];
+  highlights?: string[][];
 };
 
 export const current: Role = {
@@ -28,23 +28,19 @@ export const current: Role = {
   location: "Remote",
   summary: "Full-stack engineer, hired back full-time after my intern term. I work across Rails, GraphQL, React and Python services, mostly on two projects.",
   highlights: [
-    {
-      name: "Creative Intelligence",
-      points: [
-        "Built the frontend from an empty route to launch, then moved it from mock data to production GraphQL",
-        "Wrote the backend ranking that surfaces the most impactful recommendations first: impact-level partitioning, priority sorting, deduping and low-score filtering",
-        "Shipped the per-creative recommendation drawer and inline AI image generation across Rails and a Python service",
-        "Added Grafana alerts on screenshot and job success rates, so failures page us before users notice",
-      ],
-    },
-    {
-      name: "Creative Builder v3",
-      points: [
-        "Built the template data model: dynamic JSON fields and rich-text data, so each template defines its own editable fields",
-        "Shipped new template types end to end, including animated, shoppable video, testimonial and carousel, from Rails templaters to React editors",
-        "Added dynamic macros to ad tags, with fallback values injected into rendered templates when data is missing",
-      ],
-    },
+    [
+      "An AI product that analyzes ad creatives and recommends improvements, ranked by expected impact",
+      "Built the frontend from an empty route to launch, then moved it from mock data to production GraphQL",
+      "Wrote the backend ranking that surfaces the most impactful recommendations first: impact-level partitioning, priority sorting, deduping and low-score filtering",
+      "Shipped the per-creative recommendation drawer and inline AI image generation across Rails and a Python service",
+      "Added Grafana alerts on screenshot and job success rates, so failures page us before users notice",
+    ],
+    [
+      "A template-based editor for building and customizing ads without a designer",
+      "Built the template data model: dynamic JSON fields and rich-text data, so each template defines its own editable fields",
+      "Shipped new template types end to end, including animated, shoppable video, testimonial and carousel, from Rails templaters to React editors",
+      "Added dynamic macros to ad tags, with fallback values injected into rendered templates when data is missing",
+    ],
   ],
 };
 
