@@ -2,7 +2,7 @@ export const profile = {
   name: "James Chen",
   role: "Software Engineer",
   company: "StackAdapt",
-  location: "Ottawa, Canada",
+  location: "Toronto, Canada",
   email: "qgjameschen@gmail.com",
   github: "https://github.com/j769chen",
   linkedin: "https://www.linkedin.com/in/james23chen/",
@@ -17,6 +17,7 @@ export type Role = {
   location: string;
   summary?: string;
   points?: string[];
+  highlights?: string[][];
 };
 
 export const current: Role = {
@@ -25,7 +26,22 @@ export const current: Role = {
   start: "Jun 2024",
   end: "Present",
   location: "Remote",
-  summary: "Full-stack engineer on the Creatives team. I work on Creative Builder, which takes advertisers from concept to finished creative with 50+ templates across shoppable video, social display and more, plus Ivy AI tools that generate, enhance or add motion to visuals.",
+  summary: "Full-stack engineer, hired back full-time after my intern term. I work across Rails, GraphQL, React and Python services, mostly on two projects.",
+  highlights: [
+    [
+      "An AI product that analyzes ad creatives and recommends improvements, ranked by expected impact",
+      "Built the frontend from an empty route to launch, then moved it from mock data to production GraphQL",
+      "Wrote the backend ranking that surfaces the most impactful recommendations first: impact-level partitioning, priority sorting, deduping and low-score filtering",
+      "Shipped the per-creative recommendation drawer and inline AI image generation across Rails and a Python service",
+      "Added Grafana alerts on screenshot and job success rates, so failures page us before users notice",
+    ],
+    [
+      "A template-based editor for building and customizing ads without a designer",
+      "Built the template data model: dynamic JSON fields and rich-text data, so each template defines its own editable fields",
+      "Shipped new template types end to end, including animated, shoppable video, testimonial and carousel, from Rails templaters to React editors",
+      "Added dynamic macros to ad tags, with fallback values injected into rendered templates when data is missing",
+    ],
+  ],
 };
 
 export const internships: Role[] = [
@@ -42,6 +58,11 @@ export const internships: Role[] = [
     start: "May 2023",
     end: "Aug 2023",
     location: "Ottawa · Hybrid",
+    points: [
+      "Built an ASP.NET and MySQL dashboard that surfaces test failures and lets developers claim the related Jira tickets",
+      "Wrote a PowerShell bot that auto-approves PRs from Jenkins build data and posts test results as comments",
+      "Raised code coverage by 30% with new NUnit and PowerShell tests",
+    ],
   },
   {
     company: "Electronic Arts",
@@ -49,6 +70,11 @@ export const internships: Role[] = [
     start: "Sep 2022",
     end: "Dec 2022",
     location: "Toronto",
+    points: [
+      "Built Java Spring REST APIs for game data and anti-cheat",
+      "Built a React tool that turns CSV quest files into interactive flow diagrams, raising writing team productivity by 50%",
+      "Containerized the front end on AWS ECS/EC2 with auto-scaling, cutting costs by up to 10%",
+    ],
   },
   {
     company: "BlackBerry",
@@ -63,6 +89,10 @@ export const internships: Role[] = [
     start: "Sep 2021",
     end: "Dec 2021",
     location: "Ottawa",
+    points: [
+      "Led a continuous delivery pipeline for Kubernetes apps with ArgoCD, cutting deployment times by 40%",
+      "Built data ingestion and analytics services in Python and C#",
+    ],
   },
   {
     company: "Wind River",
@@ -70,6 +100,11 @@ export const internships: Role[] = [
     start: "May 2021",
     end: "Aug 2021",
     location: "Ottawa",
+    points: [
+      "Built an AngularJS dashboard for historical and latest test run results",
+      "Added data pipelines and removed unnecessary queries in a Django and PostgreSQL back end, improving load times by 15%",
+      "Automated production and staging Apache server deploys, cutting rebuild downtime by 30%",
+    ],
   },
   {
     company: "Raven.ai",
@@ -124,8 +159,8 @@ export const projects: Project[] = [
   },
   {
     name: "LoL Sketch",
-    blurb: "Free multiplayer drawing and guessing game for League of Legends players. Running since 2020.",
-    stack: ["Web", "Multiplayer"],
+    blurb: "Multiplayer drawing and guessing game for League of Legends players, with shared whiteboards and chat synced over WebSockets. Grew to 10,000 monthly users and has been running since 2020.",
+    stack: ["React", "Express", "WebSockets"],
     href: "https://lolsketch.com/",
     linkLabel: "lolsketch.com",
     year: "2020–now",
@@ -160,8 +195,8 @@ export const archive: Project[] = [
 ];
 
 export const skills = {
-  Languages: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "C/C++"],
-  Frontend: ["React", "React Native", "Expo", "Angular"],
-  "Backend & data": ["Node.js", "GraphQL", "PostgreSQL", "Supabase", "Pandas"],
-  Infrastructure: ["Kubernetes", "AWS", "Git", "CI/CD"],
+  Languages: ["TypeScript", "Python", "Ruby", "Java", "SQL", "C/C++"],
+  Frontend: ["React", "React Native", "Angular"],
+  "Backend & data": ["Rails", "GraphQL", "Pandas"],
+  Infrastructure: ["Kubernetes", "AWS", "Grafana", "Git"],
 };
