@@ -24,7 +24,7 @@ const base = import.meta.env.BASE_URL;
 
 <Base
   title="James Chen · Software Engineer"
-  description="James Chen is a software engineer at StackAdapt in Ottawa, building creative tools for advertisers. Carleton CS grad."
+  description="James Chen is a full-stack software engineer at StackAdapt in Ottawa. Carleton CS grad with eight internships, including EA, BlackBerry and Kinaxis."
 >
   <header class="nav">
     <div class="wrap nav-inner">
@@ -42,9 +42,9 @@ const base = import.meta.env.BASE_URL;
     <section class="hero wrap">
       <div class="hero-text">
         <p class="eyebrow">{profile.role} · {profile.location}</p>
-        <h1>Hi, I'm James.<br />I build tools that make ads look good.</h1>
+        <h1>Hi, I'm James.<br />I build software end to end.</h1>
         <p class="lede">
-          I'm a full-stack engineer at <strong>StackAdapt</strong>, working on Creative Builder and the Ivy AI features that help advertisers design, generate and ship creatives. Before that I did eight internships, including EA, BlackBerry and Kinaxis, and graduated in Computer Science from Carleton University.
+          I'm a full-stack engineer at <strong>StackAdapt</strong>, where I build across the stack on Creative Intelligence and Creative Builder v3. Before that, across eight internships at places like EA, BlackBerry and Kinaxis, I built APIs, CI/CD pipelines and internal tools that cut deploy times by 40% and raised test coverage by 30%. I graduated in Computer Science from Carleton University.
         </p>
         <div class="actions">
           <a class="btn primary" href={`mailto:${profile.email}`}><Icon name="mail" /> Get in touch</a>
@@ -70,6 +70,14 @@ const base = import.meta.env.BASE_URL;
           <span class="meta">{current.start} – {current.end} · {current.location}</span>
         </div>
         <p>{current.summary}</p>
+        {current.highlights?.map((h) => (
+          <div class="highlight">
+            <h4>{h.name}</h4>
+            <ul class="points">
+              {h.points.map((p) => <li>{p}</li>)}
+            </ul>
+          </div>
+        ))}
       </article>
 
       <p class="timeline-intro">Internships at {internshipCompanies.length} companies, 2019–2024:</p>
@@ -285,6 +293,17 @@ const base = import.meta.env.BASE_URL;
   .current p {
     margin: 0;
     max-width: 70ch;
+  }
+
+  .highlight {
+    margin-top: 20px;
+  }
+
+  .highlight h4 {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
   }
 
   .badge {
