@@ -195,8 +195,8 @@ export const archive: Project[] = [
 ];
 
 export const skills = {
-  Languages: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "C/C++"],
+  Languages: ["TypeScript", "Python", "Ruby", "Java", "SQL", "C/C++"],
   Frontend: ["React", "React Native", "Angular"],
-  "Backend & data": ["Ruby on Rails", "GraphQL", "Pandas"],
+  "Backend & data": ["Rails", "GraphQL", "Pandas"],
   Infrastructure: ["Kubernetes", "AWS", "Git", "CI/CD"],
 };
