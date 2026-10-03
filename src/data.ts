@@ -46,13 +46,6 @@ export const current: Role = {
 
 export const internships: Role[] = [
   {
-    company: "StackAdapt",
-    title: "Software Engineer Intern",
-    start: "Jan 2024",
-    end: "Apr 2024",
-    location: "Toronto · Remote",
-  },
-  {
     company: "Kinaxis",
     title: "Software Engineer Intern",
     start: "May 2023",
@@ -77,24 +70,6 @@ export const internships: Role[] = [
     ],
   },
   {
-    company: "BlackBerry",
-    title: "Software Developer Intern",
-    start: "May 2022",
-    end: "Aug 2022",
-    location: "Mississauga",
-  },
-  {
-    company: "JSI",
-    title: "Software Engineer Intern",
-    start: "Sep 2021",
-    end: "Dec 2021",
-    location: "Ottawa",
-    points: [
-      "Led a continuous delivery pipeline for Kubernetes apps with ArgoCD, cutting deployment times by 40%",
-      "Built data ingestion and analytics services in Python and C#",
-    ],
-  },
-  {
     company: "Wind River",
     title: "Software Engineer Intern",
     start: "May 2021",
@@ -116,17 +91,6 @@ export const internships: Role[] = [
       "Processed production data with Pandas to compute OEE metrics for 50+ manufacturers",
       "Built Python and Matplotlib report scripts that cut monthly report generation time by 50%",
       "Ran the scripts as Kubernetes cron jobs, fully automating monthly reporting",
-    ],
-  },
-  {
-    company: "Environment and Climate Change Canada",
-    title: "Web Developer Intern",
-    start: "Sep 2019",
-    end: "Dec 2019",
-    location: "Toronto",
-    points: [
-      "Built interactive maps and graphs for the CCDS site, lifting visits by 10%",
-      "Wrote Perl, PHP and jQuery download interfaces for climate data sets",
     ],
   },
 ];
