@@ -19,14 +19,13 @@ const photos = [
   { src: htn, alt: "James and teammates at Hack the North" },
 ];
 
-const internshipYears = internships.flatMap((r) => [r.start, r.end]).map((d) => Number(d.slice(-4)));
 const year = new Date().getFullYear();
 const base = import.meta.env.BASE_URL;
 ---
 
 <Base
   title="James Chen · Software Engineer"
-  description="James Chen is a full-stack software engineer at StackAdapt in Toronto. Carleton CS grad with eight internships, including EA, BlackBerry and Kinaxis."
+  description="James Chen is a full-stack software engineer at StackAdapt in Toronto. Carleton CS grad with eight internships, including EA and Kinaxis."
 >
   <header class="nav">
     <div class="wrap nav-inner">
@@ -46,7 +45,7 @@ const base = import.meta.env.BASE_URL;
         <p class="eyebrow">{profile.role} · {profile.location}</p>
         <h1>Hi, I'm James.<br />I build robust software with a focus on good UI/UX.</h1>
         <p class="lede">
-          I'm a full-stack engineer at <strong>StackAdapt</strong>, where I build the tools advertisers use to create, manage and improve their ads. I care about the details users notice, like responsive layouts, clear loading and error states, and fast interactions, and the ones they don't, like clean data models, safe rollouts and alerting. Before that, across eight internships at places like EA, BlackBerry and Kinaxis, I built APIs, CI/CD pipelines and internal tools that cut deploy times by 40% and raised test coverage by 30%. I graduated in Computer Science from Carleton University.
+          I'm a full-stack engineer at <strong>StackAdapt</strong>, where I build the tools advertisers use to create, manage and improve their ads. I care about the details users notice, like responsive layouts, clear loading and error states, and fast interactions, and the ones they don't, like clean data models, safe rollouts and alerting. Before that, across eight internships at places like EA and Kinaxis, I built APIs, CI/CD pipelines and internal tools that raised test coverage by 30%. I graduated in Computer Science from Carleton University.
         </p>
         <div class="actions">
           <a class="btn primary" href={`mailto:${profile.email}`}><Icon name="mail" /> Get in touch</a>
@@ -79,7 +78,7 @@ const base = import.meta.env.BASE_URL;
         ))}
       </article>
 
-      <p class="timeline-intro">Selected internships, {Math.min(...internshipYears)}–{Math.max(...internshipYears)}:</p>
+      <p class="timeline-intro">Earlier internships</p>
       <ol class="timeline">
         {internships.map((r) => (
           <li>
