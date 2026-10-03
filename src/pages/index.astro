@@ -7,14 +7,12 @@ import { profile, current, internships, projects, archive, skills } from "../dat
 import headshot from "../assets/Headshot.webp";
 import smash from "../assets/Smash.jpg";
 import ready from "../assets/Ready.webp";
-import toby from "../assets/Toby.jpg";
 import medals from "../assets/Medals.jpg";
 import htn from "../assets/HackTheNorth.jpg";
 
 const photos = [
   { src: smash, alt: "James mid-jump smash on a badminton court" },
   { src: ready, alt: "James in a ready stance during a badminton rally" },
-  { src: toby, alt: "James at a badminton training hall" },
   { src: medals, alt: "Three players wearing medals at a badminton tournament" },
   { src: htn, alt: "James and teammates at Hack the North" },
 ];
@@ -265,6 +263,7 @@ const base = import.meta.env.BASE_URL;
     max-width: 380px;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+    object-position: 37% center;
     border-radius: 28px;
     margin-left: auto;
     box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.35);
@@ -486,7 +485,7 @@ const base = import.meta.env.BASE_URL;
   }
 
   .gallery img:last-child {
-    grid-column: span 2;
+    grid-column: 1 / -1;
   }
 
   .contact p {
