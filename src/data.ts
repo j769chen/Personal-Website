@@ -100,7 +100,6 @@ export type Project = {
   blurb: string;
   stack: string[];
   href: string;
-  linkLabel: string;
   year: string;
 };
 
@@ -110,7 +109,6 @@ export const projects: Project[] = [
     blurb: "iOS and Android app that drills six-corner footwork. Corners light up on a configurable interval with beep, voice or haptic cues that duck your music instead of stopping it.",
     stack: ["React Native", "Expo", "TypeScript", "Zustand"],
     href: "https://github.com/j769chen/badminton-footwork",
-    linkLabel: "GitHub",
     year: "2026",
   },
   {
@@ -118,7 +116,6 @@ export const projects: Project[] = [
     blurb: "Expense splitting app with equal, exact and percentage splits, realtime group balances, and debt simplification that minimizes the number of payments.",
     stack: ["Expo", "TypeScript", "Supabase", "Postgres", "TanStack Query"],
     href: "https://github.com/j769chen/splitbill",
-    linkLabel: "GitHub",
     year: "2026",
   },
   {
@@ -126,7 +123,6 @@ export const projects: Project[] = [
     blurb: "Multiplayer drawing and guessing game for League of Legends players, with shared whiteboards and chat synced over WebSockets. Grew to 10,000 monthly users and has been running since 2020.",
     stack: ["React", "Express", "WebSockets"],
     href: "https://lolsketch.com/",
-    linkLabel: "lolsketch.com",
     year: "2020–now",
   },
 ];
@@ -137,7 +133,6 @@ export const archive: Project[] = [
     blurb: "Compares a player's recent matches to others at the same rank and role using the Riot API.",
     stack: ["Python"],
     href: "https://github.com/j769chen/League-Data-Analysis",
-    linkLabel: "GitHub",
     year: "2020",
   },
   {
@@ -145,7 +140,6 @@ export const archive: Project[] = [
     blurb: "Web app that scrapes and displays badminton world rankings.",
     stack: ["Python", "Flask"],
     href: "https://github.com/j769chen/BWF-Webscraping",
-    linkLabel: "GitHub",
     year: "2021",
   },
   {
@@ -153,7 +147,6 @@ export const archive: Project[] = [
     blurb: "Flappy Bird clone built to practice object-oriented design.",
     stack: ["Java", "JavaFX"],
     href: "https://github.com/j769chen/FlappyBird",
-    linkLabel: "GitHub",
     year: "2020",
   },
 ];
